@@ -21,8 +21,8 @@ jobs:
     - name: Install protoc
       run: |
         curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v21.7/protoc-21.7-linux-x86_64.zip \
-            && unzip protoc-21.7-linux-x86_64.zip -d /usr/local \
-            && chmod +x /usr/local/bin/protoc \
+            && sudo unzip protoc-21.7-linux-x86_64.zip -d /usr/local \
+            && sudo chmod +x /usr/local/bin/protoc \
             && rm protoc-21.7-linux-x86_64.zip
     - name: Install go deps
       run: |
