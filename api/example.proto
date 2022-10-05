@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "github.com/nokamoto/grpc-cli-gen/pkg/api";
+
+message Example {
+    string name = 1;
+    string description = 2;
+}
+
+service ExampleService {
+    rpc CreateExample(CreateExampleRequest) returns (Example);
+}
+
+message CreateExampleRequest {
+    Example example = 1;
+}
